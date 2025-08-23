@@ -10,7 +10,8 @@ sas_mode = True
 result = subprocess.run(["pacman", "-Qu"], capture_output = True, text = True)
 lines = result.stdout.splitlines()
 
-updateable_packages = len(lines)
+updateable_packages = 150
+#len(lines)
 
 stage_0 = [
     "Oh, look at that. All systems up to date. Someone actually tried.",
@@ -92,15 +93,44 @@ stage_5 = [
     "I’m judging everything you’ve ever done. Start updating."
 ]
 
+aurora_stage3_questions = [
+    "So… you planning to update this time, or just letting it rot?",
+    "Should I handle the updates for you, or is ignoring them fun?",
+    "Going to click 'update' now, or should I wait another century?",
+    "Do you need a reminder, or do you enjoy watching the updates pile?",
+    "Want me to start updating, or are we playing chicken?",
+    "Planning to act, or shall I judge silently for a while?",
+    "Shall we proceed with the updates, or are you pretending this isn’t urgent?",
+    "Do you want me to run the updates, or do you prefer chaos?",
+    "Are you going to update, or do I need to escalate my sarcasm?",
+    "Click 'update' yet, or just letting me talk to myself?"
+]
+aurora_stage4_questions = [
+    "Seriously? Are you waiting for a meltdown before updating?",
+    "Should I start the updates myself, or is procrastination your hobby?",
+    "Are we going to update, or just enjoy the panic?",
+    "Do you want me to fix this, or watch your system suffer?",
+    "Time to act, or is ignoring updates part of your strategy?",
+    "Want me to initiate updates, or continue testing my patience?",
+    "Shall I handle the critical updates, or do you enjoy risk?",
+    "Do you plan to update, or should I prepare a lecture?",
+    "Ready to update, or just letting the critical pile grow?",
+    "Should I take over updates, or do you enjoy living dangerously?"
+]
+
+#def update_question():
+#    if(updateable_packages >)
+
+
 def package_count():
     if updateable_packages < 10:
         print(f"[green]{updateable_packages}[/green] packages require attention.")
     elif updateable_packages < 15:
         print(f"[yellow]{updateable_packages}[/yellow] packages require attention.")
     elif updateable_packages < 20:
-        print(f"[dark_red]{updateable_packages}[/dark_red] packages require attention.")
-    elif updateable_packages >= 20:
         print(f"[red]{updateable_packages}[/red] packages require attention.")
+    elif updateable_packages >= 20:
+        print(f"[dark_red]{updateable_packages}[/dark_red] packages require attention.")
         
 
 
