@@ -91,13 +91,13 @@ stage_5 = [
 
 def package_count():
     if updateable_packages < 10:
-        print(f"Aurora: [green]{updateable_packages}[/green] packages require attention.")
+        print(f"[green]{updateable_packages}[/green] packages require attention.")
     elif updateable_packages < 15:
-        print(f"Aurora: [yellow]{updateable_packages}[/yellow] packages require attention.")
+        print(f"[yellow]{updateable_packages}[/yellow] packages require attention.")
     elif updateable_packages < 20:
-        print(f"Aurora: [dark_red]{updateable_packages}[/dark_red] packages require attention.")
+        print(f"[dark_red]{updateable_packages}[/dark_red] packages require attention.")
     elif updateable_packages >= 20:
-        print(f"Aurora: [red]{updateable_packages}[/red] packages require attention.")
+        print(f"[red]{updateable_packages}[/red] packages require attention.")
         
 
 
