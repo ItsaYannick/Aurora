@@ -1,3 +1,6 @@
+#!/usr/bin/python
+
+
 import subprocess
 import random
 from rich import print
