@@ -10,7 +10,7 @@ sas_mode = True
 result = subprocess.run(["pacman", "-Qu"], capture_output = True, text = True)
 lines = result.stdout.splitlines()
 
-updateable_packages = 150
+updateable_packages = 18
 #len(lines)
 
 stage_0 = [
@@ -118,9 +118,8 @@ aurora_stage4_questions = [
     "Should I take over updates, or do you enjoy living dangerously?"
 ]
 
-#def update_question():
-#    if(updateable_packages >)
-
+def update_question():
+    if(updateable_packages > )
 
 def package_count():
     if updateable_packages < 10:
