@@ -7,7 +7,7 @@ from rich import print
 
 sas_mode = True
 
-result = subprocess.run(["pacman", "-Qu"], capture_output = True, text = True)
+result = subprocess.run(["yay", "-Qu"], capture_output = True, text = True)
 lines = result.stdout.splitlines()
 
 updateable_packages = len(lines)
