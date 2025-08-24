@@ -15,14 +15,13 @@ normal_threshold  = 10
 
 moderate_threshold  = 15
 high_threshold  = 20
-critical_threshold  = 50
+critical_threshold  = 30
 
 
 result = subprocess.run(["pacman", "-Qu"], capture_output = True, text = True)
 lines = result.stdout.splitlines()
 
-updateable_packages = 59
-#len(lines)
+updateable_packages = len(lines)
 
 stage_0 = [
     "Oh, look at that. All systems up to date. Someone actually tried.",
@@ -180,11 +179,11 @@ aurora_auto_update_responses = [
 # Stage 4 — Critical updates (20–49)
 # Stage 5 — Overload (50+)
 
-def runUpdate():
+def update():
     #subprocess.run(["sudo", "pacman", "-Syu", "--noconfirm"])
     print("updating")
 
-def update():
+def main():
     if(updateable_packages < moderate_threshold):
         #Minimal load, no update required
         return
@@ -249,10 +248,6 @@ def regular_response():
         print("Aurora: WARNING! Over 100 updates pending. Initiate full system overhaul immediately.")
 
 package_count()
-if(sas_mode):
-    sas_response()
-    update()
-else:
-    regular_response()
+main()
     
 
