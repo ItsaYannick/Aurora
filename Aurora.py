@@ -16,6 +16,8 @@ normal_threshold = 10
 moderate_threshold = 15
 high_threshold = 20
 critical_threshold = 30
+atomic_threshold = 100
+nuclear_threshold = 1000
 
 # ---------------- FILE & STATE ----------------
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -91,8 +93,12 @@ def sas_response():
             print("Aurora:", random.choice(responses.stage_3))
         elif updateable_packages < critical_threshold:
             print("Aurora:", random.choice(responses.stage_4))
-        else:
+        elif updateable_packages < atomic_threshold:
             print("Aurora:", random.choice(responses.stage_5))
+        elif updateable_packages < nuclear_threshold:
+            print("Aurora:", random.choice(responses.stage_6))
+        else:
+            print("Aurora:", random.choice(responses.stage_7))
 
 
 def update_handler():
@@ -114,7 +120,7 @@ def update_handler():
                     update()
                 break
             else:
-                print("Aurora: I said 'y' or [red]'n'[/red]. Try again.")
+                print("Aurora:", random.choice(responses.invalid_input_responses))
 
     elif updateable_packages >= critical_threshold:
         # Forced auto-update
