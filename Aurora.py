@@ -124,19 +124,6 @@ stage_5 = [
     "I’m judging everything you’ve ever done. Start updating."
 ]
 
-aurora_normal_questions = [
-    "Only a handful of updates? Should I bother, or is this just for show?",
-    "One or two updates. Do you want me to do the thing, or just stare at the terminal together?",
-    "Shall I update now, or are we pretending this is peak productivity like in 'The Office'?",
-    "Do you actually want me to update, or is this like a digital Pet Rock situation?",
-    "Minor updates pending. Should I press the big red button, or is suspense your hobby?",
-    "Do you want me to handle these, or leave them for the next human error documentary?",
-    "Shall I click 'update', or are we enjoying the illusion of control?",
-    "Tiny updates detected. Should I do the responsible thing, or is chaos a vibe today?",
-    "Should I update these packages, or do you prefer a slow existential crisis for your OS?",
-    "A few updates. Do you want me to act, or should I just generate ironic commentary?"
-]
-
 #Update questions
 aurora_update_prompts = [
     "Alright, human. Do you want me to update the system? (y/n) ",
@@ -193,6 +180,9 @@ aurora_auto_update_responses = [
 # Stage 4 — Critical updates (20–49)
 # Stage 5 — Overload (50+)
 
+def runUpdate():
+    subprocess.run(["sudo", "pacman", "-Syu", "--noconfirm"])
+
 def update():
     if(updateable_packages < moderate_threshold):
         return
@@ -203,15 +193,15 @@ def update():
         while(True):
             inpt = input(">").strip().lower()
             if(inpt in valid_responses):
+                if(inpt == "y"):
+                    runUpdate()
                 break
             else:
-                print("Aurora: I said 'y' or 'n'. Try again.")
+                print("Aurora> I said 'y' or [red]'n'[/red]. Try again.")
                 
     else:
         #forced update
         return
-
-
 
 
 def package_count():
