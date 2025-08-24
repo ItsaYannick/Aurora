@@ -5,6 +5,8 @@ import subprocess
 import random
 from rich import print
 import responses
+import os
+import datetime
 
 sas_mode = True
 
@@ -18,13 +20,26 @@ moderate_threshold  = 15
 high_threshold  = 20
 critical_threshold  = 30
 
-print()
-
 result = subprocess.run(["pacman", "-Qu"], capture_output = True, text = True)
 lines = result.stdout.splitlines()
 
 updateable_packages = len(lines)
 
+script_dir = os.path.dirname(os.path.abspath(__file__))
+flag_file = os.path.join(script_dir, ".aurora_update_question_check")
+
+def should_ask_today():
+    today = datetime.date.today().isoformat()
+
+    if(os.path.exists(flag_file)):
+        with open(flag_file, "r") as f:
+            last_date = f.read().strip()
+        if last_date == today:
+            return False
+    
+    with open(flag_file, "w") as f:
+        f.write(today)
+    return True
 
 
 # stage 0: 0 packages
@@ -38,12 +53,13 @@ def update():
     
 
 def update_handler():
+    sas_response()
     if(updateable_packages < moderate_threshold):
         #Minimal load, no update required
         return
     elif(updateable_packages < critical_threshold):
         #Moderate to high load
-        print("Aurora:", random.choice(responses.aurora_update_prompts))
+        
 
         valid_responses = ["y", "n"]
         while(True):
@@ -73,19 +89,33 @@ def package_count():
         
 
 
-def sas_response():    
-    if updateable_packages == 0:
-        print("Aurora:", random.choice(responses.stage_0))
-    elif updateable_packages < normal_threshold:
-        print("Aurora:", random.choice(responses.stage_1))
-    elif updateable_packages < moderate_threshold:
-        print("Aurora:", random.choice(responses.stage_2))
-    elif updateable_packages < high_threshold:
-        print("Aurora:", random.choice(responses.stage_3))
-    elif updateable_packages < critical_threshold:
-        print("Aurora:", random.choice(responses.stage_4))
-    else:
-        print("Aurora:", random.choice(responses.stage_5))
+def sas_response():
+    if should_ask_today():
+        if updateable_packages == 0:
+            print("Aurora:", random.choice(responses.stage_0))
+        elif updateable_packages < normal_threshold:
+            print("Aurora:", random.choice(responses.stage_1_update))
+        elif updateable_packages < moderate_threshold:
+            print("Aurora:", random.choice(responses.stage_2_update))
+        elif updateable_packages < high_threshold:
+            print("Aurora:", random.choice(responses.stage_3_update))
+        elif updateable_packages < critical_threshold:
+            print("Aurora:", random.choice(responses.stage_4_update))
+        else:
+            print("Aurora:", random.choice(responses.stage_5))
+    else:       
+        if updateable_packages == 0:
+            print("Aurora:", random.choice(responses.stage_0))
+        elif updateable_packages < normal_threshold:
+            print("Aurora:", random.choice(responses.stage_1))
+        elif updateable_packages < moderate_threshold:
+            print("Aurora:", random.choice(responses.stage_2))
+        elif updateable_packages < high_threshold:
+            print("Aurora:", random.choice(responses.stage_3))
+        elif updateable_packages < critical_threshold:
+            print("Aurora:", random.choice(responses.stage_4))
+        else:
+            print("Aurora:", random.choice(responses.stage_5))
 
 def regular_response():
     if updateable_packages == 0:
@@ -100,6 +130,7 @@ def regular_response():
         print("Aurora: Critical updates detected. System integrity at risk.")
     else:
         print("Aurora: WARNING! Over 100 updates pending. Initiate full system overhaul immediately.")
+
 
 package_count()
 update_handler()
