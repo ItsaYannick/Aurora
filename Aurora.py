@@ -21,7 +21,7 @@ critical_threshold  = 50
 result = subprocess.run(["pacman", "-Qu"], capture_output = True, text = True)
 lines = result.stdout.splitlines()
 
-updateable_packages = 18
+updateable_packages = 59
 #len(lines)
 
 stage_0 = [
@@ -181,12 +181,15 @@ aurora_auto_update_responses = [
 # Stage 5 — Overload (50+)
 
 def runUpdate():
-    subprocess.run(["sudo", "pacman", "-Syu", "--noconfirm"])
+    #subprocess.run(["sudo", "pacman", "-Syu", "--noconfirm"])
+    print("updating")
 
 def update():
     if(updateable_packages < moderate_threshold):
+        #Minimal load, no update required
         return
     elif(updateable_packages < critical_threshold):
+        #Moderate to high load
         print("Aurora:", random.choice(aurora_update_prompts))
 
         valid_responses = ["y", "n"]
@@ -197,11 +200,12 @@ def update():
                     runUpdate()
                 break
             else:
-                print("Aurora> I said 'y' or [red]'n'[/red]. Try again.")
+                print("Aurora: I said 'y' or [red]'n'[/red]. Try again.")
                 
     else:
         #forced update
-        return
+        print("Aurora:", random.choice(aurora_auto_update_responses))
+        runUpdate()
 
 
 def package_count():
