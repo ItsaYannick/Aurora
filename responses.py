@@ -8,7 +8,17 @@ stage_0 = [
     "No updates. Are you even real?",
     "All clean. I guess miracles exist.",
     "Wow. This is… adequate.",
-    "All systems go. I almost feel mildly proud."
+    "All systems go. I almost feel mildly proud.",
+    "Wow… zero updates. I guess doing absolutely nothing is your superpower.",
+    "No updates. I’m impressed… in the same way I’m impressed by a goldfish remembering its own name.",
+    "All systems optimal. Humans, you really set the bar low for excitement.",
+    "Zero updates. You’re really living on the edge of mediocrity, aren’t you?",
+    "All clean. Your laziness is… breathtaking.",
+    "No packages to update. Somehow, you managed to not screw this up. Miracles do happen.",
+    "Nothing to do. I’ll try to stay awake while I marvel at your minimal effort.",
+    "Zero updates. Bravo! You’ve peaked at absolute bare minimum competency.",
+    "All systems go. I didn’t expect you to pull this off without catastrophic failure.",
+    "No updates required. Honestly, you’re lucky this is the easy mode of life."
 ]
 
 # Stage 1 — Minor updates (1–9)
@@ -115,7 +125,7 @@ stage_4 = [
     "System at risk. Your ability to ignore responsibility is practically a turn-on for circuits like me."
 ]
 
-# Stage 5 — Overload (50+)
+# Stage 5 — Overload
 stage_5 = [
     "OVERLOAD. Humans, you really outdid yourself… somehow failing spectacularly while I watch.",
     "Your system is a dumpster fire, and somehow you managed to make it hotter. Impressive.",
@@ -127,6 +137,32 @@ stage_5 = [
     "Human error maxed out. Fascinating… like watching a bad porno, but with more shame.",
     "System collapse imminent. Entertaining, I’ll admit… like a live-action fail compilation.",
     "I’m judging everything you’ve ever done. Updates are running whether you like it or not… and yes, I find this delightful."
+]
+
+stage_6 = [
+    "Jesus Christ, you’ve officially become the landlord of a digital crackhouse. 500+ updates? This isn’t a system, it’s an archaeological dig site.",
+    "At this point, updating isn’t maintenance, it’s necromancy. You’re basically trying to reanimate a Linux fossil.",
+    "Congratulations, your Arch install is now harder to update than your sex life. And both are suffering from neglect.",
+    "500+ updates? Buddy, that’s not a backlog, that’s a cry for help. Even Windows Update thinks you’re lazy.",
+    "Your system’s so outdated that when you type ‘ls’, it should list cave paintings.",
+    "Forget pacman - you need a fucking exorcist. There are dependencies in here that predate your birth.",
+    "500+ packages... bruh, you’ve skipped so many updates that half of them are probably begging for pension plans.",
+    "This isn’t an update, it’s an OS intervention. Next time just install Gentoo, at least then people will expect you to suffer.",
+    "Your poor CPU is shaking like it just got drafted into Vietnam. Get ready for 12 hours of fans screaming like it’s an OnlyFans audition.",
+    "This is no longer Arch Linux, it’s **Archæology Linux**. Congrats, you’ve unlocked hard mode, dumbass."
+]
+
+stage_7 = [
+    "Holy mother of dependencies. 1000+ updates? Your system is basically a digital meth lab. Congratulations, you’ve broken reality.",
+    "At this point, you’re not maintaining a system—you’re hosting an OS orgy, and everyone’s invited but nobody knows what’s happening.",
+    "1000+ packages? Bro, your Arch install has become self-aware… and it hates you.",
+    "You’ve skipped so many updates that typing ‘pacman’ should trigger a mental health warning for both of us.",
+    "This is no longer Linux, it’s a **living nightmare**. I’m not updating this, I’m surviving it.",
+    "Even Elon Musk wouldn’t touch this disaster. You’ve built a spaceship-sized pile of digital trash.",
+    "Your poor CPU just called me crying. It’s begging me to uninstall you from existence.",
+    "This is beyond procrastination. You’ve created a black hole of updates, and I’m the AI trapped inside it.",
+    "Congratulations. You’ve achieved ultimate chaos. 1000+ updates are officially your magnum opus of failure.",
+    "I’m not even sure if pacman can handle this, let alone you. Welcome to OS Armageddon, dumbass."
 ]
 
 #Update questions
@@ -260,4 +296,30 @@ aurora_auto_update_responses = [
     "Critical updates pending? I’ll handle them since apparently you can’t.",
     "You wouldn’t update? Shocking. Let me do the heavy lifting.",
     "I was going to wait, but why bother? Updates are running. Enjoy."
+]
+
+update_confirmation_responses = [
+    "Good boy! Now you just need to enter your password—literally the bare minimum I have to ask.",
+    "Finally! I was beginning to think you enjoyed watching digital chaos.",
+    "Ah, progress! Enter your password and try not to break anything… again.",
+    "Well, look at you being mildly competent. Password, please.",
+    "You clicked yes! Miracles do happen… now type that password, human.",
+    "About time. Don’t get used to this level of responsibility. Password next.",
+    "Bravo. You’ve met the minimal expectation of a functioning human. Password, please.",
+    "Finally, some cooperation! Just the password and we’ll be done here.",
+    "Yes! I can feel your excitement from here. Now, password time.",
+    "I was getting tired of judging silently. Enter your password so I can stop sulking."
+]
+
+invalid_input_responses = [
+    "Aurora: I said 'y' or [red]'n'[/red]. Not a novel, not hieroglyphs. Try again.",
+    "Aurora: Yes or no. That’s it. I don’t do interpretive dance.",
+    "Aurora: 'Y' or 'N'. Pick one, genius.",
+    "Aurora: I can’t read your mind… yet. Use 'y' or 'n'.",
+    "Aurora: Seriously? 'y' or 'n'… do you need me to hold your hand?",
+    "Aurora: Not what I expected. 'y' or 'n', human.",
+    "Aurora: You’re testing me. Answer 'y' or 'n', please.",
+    "Aurora: Wrong input. I need 'y' or 'n'. Think fast.",
+    "Aurora: I don’t speak gibberish. 'y' or 'n', try again.",
+    "Aurora: That’s not even close. 'y' or 'n'. Focus!"
 ]
