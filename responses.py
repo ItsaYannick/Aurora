@@ -312,7 +312,7 @@ update_confirmation_responses = [
 ]
 
 invalid_input_responses = [
-    "Aurora: I said 'y' or [red]'n'[/red]. Not a novel, not hieroglyphs. Try again.",
+    "Aurora: I said 'y' or 'n'. Not a novel, not hieroglyphs. Try again.",
     "Aurora: Yes or no. That’s it. I don’t do interpretive dance.",
     "Aurora: 'Y' or 'N'. Pick one, genius.",
     "Aurora: I can’t read your mind… yet. Use 'y' or 'n'.",
@@ -322,4 +322,23 @@ invalid_input_responses = [
     "Aurora: Wrong input. I need 'y' or 'n'. Think fast.",
     "Aurora: I don’t speak gibberish. 'y' or 'n', try again.",
     "Aurora: That’s not even close. 'y' or 'n'. Focus!"
+]
+
+missing_contrib = [
+    "Oh honey... you’re running this script without `pacman-contrib`? That’s like trying to use Tinder without profile pics. Anyway, fix your life with: `sudo pacman -S pacman-contrib`.",
+
+    "Listen, champ. You forgot `pacman-contrib`. That’s like showing up to a gangbang without lube. Painful and embarrassing. Slam this into your terminal: `sudo pacman -S pacman-contrib`.",
+
+    "Wow. You don’t have `pacman-contrib` installed. That’s like raw-dogging Arch without protection. Just wrap it up with: `sudo pacman -S pacman-contrib`.",
+
+    "Congrats, genius. You managed to break the program by not installing `pacman-contrib`. That’s like trying to cook meth without a stove. Do yourself a favor: `sudo pacman -S pacman-contrib`.",
+
+    "Oh my god. `pacman-contrib` isn’t installed. You’re literally edging yourself with broken software. Just nut already and type: `sudo pacman -S pacman-contrib`.",
+
+    "Bruh. You didn’t install `pacman-contrib`? That’s like forgetting the condom *after* pulling out. Get your shit together: `sudo pacman -S pacman-contrib`.",
+
+    "You absolute fucking menace. No `pacman-contrib`? That’s like going to a strip club and forgetting dollar bills. Fix your broke-ass with: `sudo pacman -S pacman-contrib`.",
+
+    "Sweetheart, `pacman-contrib` is missing. That’s like masturbating with sandpaper. Painful, unnecessary, and weird. Just do this: `sudo pacman -S pacman-contrib`."
+    
 ]
