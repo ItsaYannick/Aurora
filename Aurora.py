@@ -25,8 +25,7 @@ flag_file = os.path.join(script_dir, ".aurora_update_question_check")
 should_ask_today = False
 
 # ---------------- GET UPDATABLE PACKAGES ----------------
-result = subprocess.run(["pacman", "-Qu"], capture_output=True, text=True)
-updateable_packages = len(result.stdout.splitlines())
+
 
 # ---------------- FUNCTIONS ----------------
 
@@ -129,6 +128,16 @@ def update_handler():
 
 
 # ---------------- MAIN ----------------
-should_ask_today_function()
-package_count()
-update_handler()
+#Check if pacman-contrib is installed
+res = subprocess.run(["pacman", "-Q", "pacman-contrib"], capture_output=True, text=True)
+
+
+if res.returncode != 0:
+    print("Aurora:", random.choice(responses.missing_contrib))
+else:
+    result = subprocess.run(["checkupdates"], capture_output=True, text=True)
+    updateable_packages = len(result.stdout.splitlines())
+
+    should_ask_today_function()
+    package_count()
+    update_handler()
