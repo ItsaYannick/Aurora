@@ -20,7 +20,7 @@ atomic_threshold = 100
 nuclear_threshold = 1000
 
 # ---------------- FILE & STATE ----------------
-script_dir = os.path.dirname(os.path.abspath(__file__))
+script_dir = os.getenv("HOME")+"/.config"
 flag_file = os.path.join(script_dir, ".aurora_update_question_check")
 should_ask_today = False
 
