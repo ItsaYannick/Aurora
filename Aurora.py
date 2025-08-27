@@ -129,10 +129,10 @@ def update_handler():
 
 # ---------------- MAIN ----------------
 #Check if pacman-contrib is installed
-res = subprocess.run(["pacman", "-Q", "pacman-contrib"], capture_output=True, text=True)
+check = subprocess.run(["pacman", "-Q", "pacman-contrib"], capture_output=True, text=True)
 
 
-if res.returncode != 0:
+if check.returncode != 0:
     print("Aurora:", random.choice(responses.missing_contrib))
 else:
     result = subprocess.run(["checkupdates"], capture_output=True, text=True)
