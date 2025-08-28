@@ -6,6 +6,7 @@ from rich import print
 import responses
 import os
 import datetime
+import time
 
 # ---------------- CONFIG ----------------
 
@@ -21,13 +22,27 @@ nuclear_threshold = 1000
 
 # ---------------- FILE & STATE ----------------
 script_dir = os.getenv("HOME")+"/.config"
-flag_file = os.path.join(script_dir, ".aurora_update_question_check")
+flag_file = os.path.join(script_dir, ".aurora_update_flag")
+time_flag_file = os.path.join(script_dir, ".aurora_time_flag")
 should_ask_today = False
 
 # ---------------- GET UPDATABLE PACKAGES ----------------
 
 
 # ---------------- FUNCTIONS ----------------
+
+def should_sync():
+    """Check if we have synced in the last hour"""
+    current_time = str(time.localtime().tm_hour)
+    if os.path.exists(time_flag_file):
+        with open(time_flag_file, "r") as f:
+            last_hour = f.read().strip()
+        if last_hour == current_time:
+            return False
+    with open(time_flag_file, "w") as f:
+        f.write(current_time)
+    return True
+
 
 def should_ask_today_function():
     """Check if we have already asked the user today."""
@@ -71,7 +86,7 @@ def sas_response():
         if updateable_packages == 0:
             print("Aurora:", random.choice(responses.stage_0))
         elif updateable_packages < normal_threshold:
-            print("Aurora:", random.choice(responses.stage_1_update))
+            print("Aurora:", random.choice(responses.stage_1))
         elif updateable_packages < moderate_threshold:
             print("Aurora:", random.choice(responses.stage_2_update))
         elif updateable_packages < high_threshold:
@@ -135,16 +150,14 @@ check = subprocess.run(["pacman", "-Q", "pacman-contrib"], capture_output=True, 
 if check.returncode != 0:
     print("Aurora:", random.choice(responses.missing_contrib))
 else:
-    result = subprocess.run(["checkupdates"], capture_output=True, text=True)
+    if should_sync():
+        result = subprocess.run(["checkupdates"], capture_output=True, text=True)
+    else:
+       result = subprocess.run(["checkupdates", "-n"], capture_output=True, text=True)
+
     updateable_packages = len(result.stdout.splitlines())
 
     should_ask_today_function()
     package_count()
     update_handler()
 
-    colors = [
-        "green",
-        "yellow",
-        "red",
-        "dark_red"
-    ]
