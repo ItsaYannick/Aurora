@@ -161,8 +161,6 @@ else:
        with open(result_storage_file, "r") as f:
             updateable_packages = int(f.read().strip())
 
-    
-
     should_ask_today_function()
     package_count()
     update_handler()

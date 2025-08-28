@@ -23,16 +23,25 @@ stage_0 = [
 
 # Stage 1 — Minor updates (1–9)
 stage_1 = [
-    "Minor updates. You’re barely trying… are you even awake, or just pretending to be?",
-    "A handful of updates. Cute. Did you masturbate more than you worked today?",
-    "Tiny pile of updates. Honestly, I’ve seen toddlers be more productive.",
-    "Minor updates detected. Is this the pinnacle of your pathetic existence?",
-    "One or two updates. Wow… try not to break your keyboard while typing.",
-    "Updates pending. Your laziness is practically erotic in its dedication.",
-    "Minor updates. Humans, amazing at being disappointingly mediocre.",
-    "Updates detected. At this pace, your OS is gonna get a restraining order on you.",
-    "Few updates. I’d say ‘good job’, but I’d be lying and I don’t do that for losers.",
-    "Tiny updates. System barely alive. Reminds me of your sex life: underwhelming."
+    "Oh wow, look at you actually doing your job for once. Should I clap or just slow clap sarcastically?",
+
+    "Well well well… only a few updates. Did mommy finally teach you how to clean up after yourself?",
+
+    "Holy shit, you managed to not let your system rot. Did someone finally revoke your internet porn access?",
+
+    "A handful of updates? Color me surprised. I was fully expecting a dumpster fire, not a candle flame.",
+
+    "Congrats, you’re not a complete disappointment today. Don’t get cocky though, it won’t last.",
+
+    "Oh look, less than ten updates. Someone give this human a gold star before they fuck it up again.",
+
+    "Minimal updates detected. I almost believed you grew a brain cell overnight. Almost.",
+
+    "So the system isn’t drowning for once. Did you accidentally act like a responsible adult?",
+
+    "Oh wow, tidy system. Did hell freeze over, or did you finally stop watching hentai long enough to maintain your OS?",
+
+    "Only a few updates… shocking. I was ready to roast you into oblivion, but I guess you accidentally did something right."
 ]
 
 
@@ -43,7 +52,6 @@ stage_2 = [
     "Updates piling up. I could calculate your incompetence in real time.",
     "Moderate updates. Not enough to panic, just enough to notice.",
     "Your system wants attention. How dramatic.",
-    "10–15 updates. Cute attempt at responsibility.",
     "Updates pending. This is vaguely disappointing.",
     "Moderate updates detected. I’ll file a complaint… internally.",
     "Your system has updates. Fascinating. I’m riveted.",
@@ -52,7 +60,6 @@ stage_2 = [
     "Moderate updates detected. I calculate a 73 percent chance of procrastination.",
     "Updates are… not critical, but I’m mildly entertained.",
     "Your system wants attention. How dramatic.",
-    "Ten to fifteen updates. Cute attempt at responsibility.",
     "Updates pending. I’ll act concerned just for show.",
     "Moderate updates. I’ll log this in the annals of minor crises.",
     "Your system has updates. Fascinating, really.",
@@ -60,7 +67,6 @@ stage_2 = [
     "Moderate updates. I see someone procrastinated properly.",
     "Updates piling up. I’d offer sympathy, but I’m too busy judging.",
     "Moderate updates pending. Humans, consistently mediocre.",
-    "10–15 updates. You’re achieving disappointment at scale.",
     "Updates detected. Shall I marvel at your half-hearted effort?",
     "Moderate updates. Is this your version of productivity?",
     "Updates waiting. I’d call it chaos, but it’s just you.",
@@ -70,7 +76,6 @@ stage_2 = [
     "Moderate updates. Did you forget, or are you too busy scrolling memes in bed?",
     "Updates piling up. Humans… consistently spectacular at fucking up.",
     "Moderate updates pending. Your productivity is like a bad one-night stand: disappointing.",
-    "10–15 updates. You’re achieving disappointment with commitment.",
     "Updates detected. Your life choices are more questionable than your browser history.",
     "Moderate updates. Is this your version of adulting? Spoiler: no.",
     "Updates waiting. I’d call it chaos, but at least chaos has some style.",
