@@ -24,6 +24,7 @@ nuclear_threshold = 1000
 script_dir = os.getenv("HOME")+"/.config"
 flag_file = os.path.join(script_dir, ".aurora_update_flag")
 time_flag_file = os.path.join(script_dir, ".aurora_time_flag")
+result_storage_file = os.path.join(script_dir, ".aurora_result_storage_file")
 should_ask_today = False
 
 # ---------------- GET UPDATABLE PACKAGES ----------------
@@ -152,10 +153,15 @@ if check.returncode != 0:
 else:
     if should_sync():
         result = subprocess.run(["checkupdates"], capture_output=True, text=True)
-    else:
-       result = subprocess.run(["checkupdates", "-n"], capture_output=True, text=True)
+        updateable_packages = len(result.stdout.splitlines())
+        with open(result_storage_file, "w") as f:
+            f.write(str(updateable_packages))
 
-    updateable_packages = len(result.stdout.splitlines())
+    else:
+       with open(result_storage_file, "r") as f:
+            updateable_packages = int(f.read().strip())
+
+    
 
     should_ask_today_function()
     package_count()
