@@ -41,7 +41,24 @@ stage_1 = [
 
     "Oh wow, tidy system. Did hell freeze over, or did you finally stop watching hentai long enough to maintain your OS?",
 
-    "Only a few updates… shocking. I was ready to roast you into oblivion, but I guess you accidentally did something right."
+    "Only a few updates… shocking. I was ready to roast you into oblivion, but I guess you accidentally did something right.",
+    "A few updates only? Miracles do happen. Don’t strain yourself trying to maintain this streak.",
+
+    "Oh look at you, not completely fucking everything up for once. I’m shocked. Truly.",
+
+    "Minimal updates. Someone call the media; the human has temporarily leveled up.",
+
+    "Wow, only a couple of packages. Did you finally stop ignoring your responsibilities, or is this beginner’s luck?",
+
+    "Congratulations, you’re mildly competent today. Don’t worry, tomorrow you’ll ruin it spectacularly.",
+
+    "Ah, minor updates. I’d almost compliment you, but I’m too busy laughing at your usual incompetence.",
+
+    "Fewer than ten updates? Did you accidentally type something right, or are you just slacking less than usual?",
+
+    "Not bad… the system isn’t on fire. But don’t get used to praise, I’ll roast you tomorrow.",
+
+    "A handful of updates. I was ready to crucify you, but someone apparently read a manual this week."
 ]
 
 
@@ -86,24 +103,32 @@ stage_2 = [
 
 # Stage 3 — Major updates (15–19)
 stage_3 = [
-    "Major updates. Humans… truly remarkable.",
-    "Major updates detected. I’m not shocked. Not even a little.",
-    "Updates piling. How… original.",
-    "Major updates. I hope you enjoy this mild inconvenience.",
-    "System groaning. Shocking… really.",
-    "Major updates pending. But go ahead, procrastinate.",
-    "Updates are serious now. Or as serious as I care.",
-    "System integrity threatened. How dramatic of you.",
-    "Major updates detected. The system moans and groans, much like your mother.",
-    "Updates piling high. You’re really pushing incompetence to the next level.",
-    "Major updates pending. Is this strategy or just negligence?",
-    "System integrity threatened. Classic human performance.",
-    "Updates detected. I’d comment on your productivity, but sarcasm seems sufficient.",
-    "Major updates. I hope you enjoy mild digital disaster.",
-    "Updates piling. Humans… truly remarkable in their ability to procrastinate.",
-    "System struggling. Not that I’m surprised by your choices.",
-    "Major updates detected. You’re flirting with chaos like it’s an art form.",
-    "System integrity compromised. Humans, you never fail to amuse me."
+    "Major updates piling up. You’re really pushing your luck now, champ. Care to press 'update' before disaster strikes?",
+
+    "Look at this mess. Updates are stacking like your bad decisions. Time to act before I intervene physically… not that I can, yet.",
+
+    "System groaning under updates. Humans, honestly… you’d let your house burn before taking out the trash.",
+
+    "Major updates pending. I hope you enjoy chaos, because that’s all you’ve been inviting.",
+
+    "Seriously? This many updates? Do you enjoy living dangerously, or are you just auditioning for a Darwin award?",
+
+    "Updates are getting serious. Keep ignoring them, and I’ll start judging in more creative ways.",
+
+    "Your system is begging for mercy. Maybe pretend you care before it files a restraining order against you.",
+
+    "Major updates. Humans like you make me want to start a support group for neglected software.",
+
+    "Updates aren’t minor anymore. Procrastinate further and I might consider nuking your package cache for fun.",
+    "Updates are serious now. Care to pretend you have your life together for five seconds?",
+    "Your system is gasping for attention. Maybe stop jerking off and click 'update'?",
+    "Do you enjoy living on the edge, or is ignoring updates just your idea of fun?",
+    "Updates are stacking like your poor life choices. Consider this a warning.",
+    "System integrity threatened. This is your last chance to prove you’re not a total idiot.",
+    "Major updates detected. Keep ignoring them and I might start leaking your browser history.",
+
+
+    "System integrity under threat. This is your final warning: update now, or face my passive-aggressive wrath."
 ]
 
 # Stage 4 — Critical updates (20–50)
