@@ -8,7 +8,7 @@ import os
 import datetime
 
 # ---------------- CONFIG ----------------
-sas_mode = True
+
 
 # Thresholds for update stages
 stage0_threshold = 0
