@@ -13,10 +13,10 @@ sas_mode = True
 # Thresholds for update stages
 stage0_threshold = 0
 normal_threshold = 10
-moderate_threshold = 15
-high_threshold = 20
-critical_threshold = 30
-atomic_threshold = 100
+moderate_threshold = 25
+high_threshold = 50
+critical_threshold = 100
+atomic_threshold = 200
 nuclear_threshold = 1000
 
 # ---------------- FILE & STATE ----------------
@@ -141,3 +141,10 @@ else:
     should_ask_today_function()
     package_count()
     update_handler()
+
+    colors = [
+        "green",
+        "yellow",
+        "red",
+        "dark_red"
+    ]
