@@ -124,7 +124,7 @@ def update_handler():
         # Minimal load, no update required
         return
 
-    elif updateable_packages < critical_threshold and should_ask_today:
+    elif updateable_packages < high_threshold and should_ask_today:
         # Moderate to high load, ask user
         valid_responses = ["y", "n"]
         while True:
@@ -137,7 +137,7 @@ def update_handler():
             else:
                 print("Aurora:", random.choice(responses.invalid_input_responses))
 
-    elif updateable_packages >= critical_threshold:
+    elif updateable_packages >= high_threshold:
         # Forced auto-update
         print("Aurora:", random.choice(responses.aurora_auto_update_responses))
         update()

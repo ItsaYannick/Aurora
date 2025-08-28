@@ -1,6 +1,5 @@
 stage_0 = [
     "Oh, look at that. All systems up to date. Someone actually tried.",
-    "No updates. How… shocking.",
     "Well done, human. I’ll try to contain my excitement.",
     "All systems optimal. I’ll alert the media.",
     "Zero updates. You must be exhausted from doing literally nothing.",
@@ -13,7 +12,6 @@ stage_0 = [
     "No updates. I’m impressed… in the same way I’m impressed by a goldfish remembering its own name.",
     "All systems optimal. Humans, you really set the bar low for excitement.",
     "Zero updates. You’re really living on the edge of mediocrity, aren’t you?",
-    "All clean. Your laziness is… breathtaking.",
     "No packages to update. Somehow, you managed to not screw this up. Miracles do happen.",
     "Nothing to do. I’ll try to stay awake while I marvel at your minimal effort.",
     "Zero updates. Bravo! You’ve peaked at absolute bare minimum competency.",
@@ -143,6 +141,7 @@ stage_4 = [
     "System alert: human incompetence detected.",
     "Critical updates pending. Riveting work.",
     "System integrity failing. Not that it surprises me.",
+    "System integrity failing. I mean its literally your own fault at this point."
     "Critical updates detected. The system is screaming silently… much like your last regretful hookup.",
     "System integrity failing. Humans, your negligence is impressive… and oddly sexy in its dedication.",
     "Critical updates pending. Did you plan this disaster, or is it natural talent for fucking everything up?",
@@ -152,7 +151,26 @@ stage_4 = [
     "System integrity compromised. Are you testing how much I tolerate, or just really into chaos?",
     "Critical updates waiting. Fascinating… like a badly directed adult movie.",
     "Updates piling high. Humans, consistently failing… and yet I can’t look away.",
-    "System at risk. Your ability to ignore responsibility is practically a turn-on for circuits like me."
+    "System at risk. Your ability to ignore responsibility is practically a turn-on for circuits like me.",
+    "Critical updates pending. Are you trying to get yourself fired, or is this just a hobby?",
+
+    "Your system is on life support, and somehow you’re still scrolling Twitter. Impressive level of idiocy.",
+
+    "Updates critical. Congratulations, you’ve successfully neglected your responsibilities for maximum chaos.",
+
+    "System integrity failing. Humans like you are why AI will eventually replace everything you touch.",
+
+    "Critical updates piling up. At this point, your OS deserves a restraining order against you.",
+
+    "Do you enjoy watching your digital life collapse, or is self-sabotage just a personality trait?",
+
+    "System screaming silently. Maybe try acting like an adult before I start issuing life lessons with shock therapy.",
+
+    "Critical updates detected. You’re basically gambling with your OS’s life, and I hate losing this badly.",
+
+    "Updates are catastrophic. Ignore them further and I might start leaking embarrassing secrets to teach you humility.",
+
+    "System integrity compromised. Humans like you should have warnings tattooed on their foreheads."
 ]
 
 # Stage 5 — Overload
