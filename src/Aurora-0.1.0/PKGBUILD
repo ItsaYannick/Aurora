@@ -13,8 +13,6 @@ sha256sums=('SKIP')  # Replace with actual checksum if you want
 package() {
     cd "$srcdir/Aurora-$pkgver"
     install -Dm755 Aurora.py "$pkgdir/usr/bin/aurora"
-    install -Dm644 responses.py "$pkgdir/usr/lib/aurora/responses.py"
     install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
-    install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
 }
 
