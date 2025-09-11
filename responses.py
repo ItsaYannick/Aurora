@@ -1,22 +1,35 @@
+# Aurora - A Arch Linux update assistant
+# Copyright (C) 2025 Yannick Winkler
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+
 stage_0 = [
     "Oh, look at that. All systems up to date. Someone actually tried.",
     "Well done, human. I’ll try to contain my excitement.",
     "All systems optimal. I’ll alert the media.",
     "Zero updates. You must be exhausted from doing literally nothing.",
     "Impressive. I didn’t think you had it in you.",
-    "No updates. Are you even real?",
     "All clean. I guess miracles exist.",
     "Wow. This is… adequate.",
     "All systems go. I almost feel mildly proud.",
     "Wow… zero updates. I guess doing absolutely nothing is your superpower.",
-    "No updates. I’m impressed… in the same way I’m impressed by a goldfish remembering its own name.",
     "All systems optimal. Humans, you really set the bar low for excitement.",
     "Zero updates. You’re really living on the edge of mediocrity, aren’t you?",
     "No packages to update. Somehow, you managed to not screw this up. Miracles do happen.",
-    "Nothing to do. I’ll try to stay awake while I marvel at your minimal effort.",
     "Zero updates. Bravo! You’ve peaked at absolute bare minimum competency.",
-    "All systems go. I didn’t expect you to pull this off without catastrophic failure.",
-    "No updates required. Honestly, you’re lucky this is the easy mode of life."
+    "All systems go. I didn’t expect you to pull this off without catastrophic failure."
 ]
 
 # Stage 1 — Minor updates (1–9)
