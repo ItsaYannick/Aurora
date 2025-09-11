@@ -132,6 +132,8 @@ def update_handler():
             if inpt in valid_responses:
                 if inpt == "y":
                     update()
+                    with open(result_storage_file, "w") as f:
+                        f.write("0")
                 break
             else:
                 print("Aurora:", random.choice(responses.invalid_input_responses))
@@ -140,6 +142,8 @@ def update_handler():
         # Forced auto-update
         print("Aurora:", random.choice(responses.aurora_auto_update_responses))
         update()
+        with open(result_storage_file, "w") as f:
+            f.write("0")
 
 
 # ---------------- MAIN ----------------
