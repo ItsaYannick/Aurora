@@ -9,7 +9,7 @@ import datetime
 import time
 
 # ---------------- CONFIG ----------------
-
+auto_update = True
 # Thresholds for update stages
 stage0_threshold = 0
 normal_threshold = 20
@@ -136,7 +136,7 @@ def update_handler():
             else:
                 print("Aurora:", random.choice(responses.invalid_input_responses))
 
-    elif updateable_packages >= high_threshold:
+    elif updateable_packages >= high_threshold and auto_update:
         # Forced auto-update
         print("Aurora:", random.choice(responses.aurora_auto_update_responses))
         update()
