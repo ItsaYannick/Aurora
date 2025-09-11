@@ -10,14 +10,13 @@ import time
 
 # ---------------- CONFIG ----------------
 
-
 # Thresholds for update stages
 stage0_threshold = 0
-normal_threshold = 10
-moderate_threshold = 25
-high_threshold = 50
-critical_threshold = 100
-atomic_threshold = 200
+normal_threshold = 20
+moderate_threshold = 60
+high_threshold = 120
+critical_threshold = 200
+atomic_threshold = 500
 nuclear_threshold = 1000
 
 # ---------------- FILE & STATE ----------------

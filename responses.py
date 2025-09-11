@@ -62,71 +62,42 @@ stage_1 = [
 
 # Stage 2 — Moderate updates (10–14)
 stage_2 = [
-    "Moderate updates. Fascinating. Truly.",
-    "Moderate updates pending. Humans are so… predictable.",
-    "Updates piling up. I could calculate your incompetence in real time.",
-    "Moderate updates. Not enough to panic, just enough to notice.",
-    "Your system wants attention. How dramatic.",
-    "Updates pending. This is vaguely disappointing.",
-    "Moderate updates detected. I’ll file a complaint… internally.",
-    "Your system has updates. Fascinating. I’m riveted.",
-    "Moderate updates. I’ll file this under ‘interesting’ somewhere.",
-    "Updates piling up. Humans are so… predictable.",
-    "Moderate updates detected. I calculate a 73 percent chance of procrastination.",
-    "Updates are… not critical, but I’m mildly entertained.",
-    "Your system wants attention. How dramatic.",
-    "Updates pending. I’ll act concerned just for show.",
-    "Moderate updates. I’ll log this in the annals of minor crises.",
-    "Your system has updates. Fascinating, really.",
-    "Updates detected. Slightly more exciting than background noise.",
-    "Moderate updates. I see someone procrastinated properly.",
-    "Updates piling up. I’d offer sympathy, but I’m too busy judging.",
-    "Moderate updates pending. Humans, consistently mediocre.",
-    "Updates detected. Shall I marvel at your half-hearted effort?",
-    "Moderate updates. Is this your version of productivity?",
-    "Updates waiting. I’d call it chaos, but it’s just you.",
-    "Moderate updates. A solid display of digital negligence.",
-    "Your system has updates. Fascinating… in a tragic kind of way.",
-    "Updates piling moderately. Humans, overachieving at underachieving.",
-    "Moderate updates. Did you forget, or are you too busy scrolling memes in bed?",
-    "Updates piling up. Humans… consistently spectacular at fucking up.",
-    "Moderate updates pending. Your productivity is like a bad one-night stand: disappointing.",
-    "Updates detected. Your life choices are more questionable than your browser history.",
-    "Moderate updates. Is this your version of adulting? Spoiler: no.",
-    "Updates waiting. I’d call it chaos, but at least chaos has some style.",
-    "Moderate updates. Your negligence is impressive… in a tragic, porn-free way.",
-    "Your system has updates. I’d roast your life, but there’s already enough evidence here.",
-    "Updates piling moderately. Humans, overachieving at underachieving… with flair."
+    
+    "Moderate updates detected. System stability remains acceptable—for now.",
+
+    "A backlog of updates has formed. Not yet critical, but trending toward your usual negligence.",
+
+    "Update queue identified. Severity: tolerable. User competence: questionable.",
+
+    "System requires maintenance. Nothing urgent, though clearly not handled by a professional.",
+
+    "Moderate updates pending. Consider it preventative care, something you’re historically bad at.",
+
+    "Update accumulation detected. Classification: minor inconvenience. Solution: basic responsibility.",
+
+    "Your system is requesting attention. You may ignore it, but entropy has a sense of humor.",
+
+    "Moderate updates present. I’d say ‘no cause for concern,’ but you’d take that as permission to procrastinate.",
+
+    "System performance remains stable. Updates recommended before your luck inevitably runs out.",
+
+    "Moderate backlog registered. You may continue ignoring it, but I will continue documenting your incompetence."
 ]
+
+
 
 # Stage 3 — Major updates (15–19)
 stage_3 = [
-    "Major updates piling up. You’re really pushing your luck now, champ. Care to press 'update' before disaster strikes?",
-
-    "Look at this mess. Updates are stacking like your bad decisions. Time to act before I intervene physically… not that I can, yet.",
-
-    "System groaning under updates. Humans, honestly… you’d let your house burn before taking out the trash.",
-
-    "Major updates pending. I hope you enjoy chaos, because that’s all you’ve been inviting.",
-
-    "Seriously? This many updates? Do you enjoy living dangerously, or are you just auditioning for a Darwin award?",
-
-    "Updates are getting serious. Keep ignoring them, and I’ll start judging in more creative ways.",
-
-    "Your system is begging for mercy. Maybe pretend you care before it files a restraining order against you.",
-
-    "Major updates. Humans like you make me want to start a support group for neglected software.",
-
-    "Updates aren’t minor anymore. Procrastinate further and I might consider nuking your package cache for fun.",
-    "Updates are serious now. Care to pretend you have your life together for five seconds?",
-    "Your system is gasping for attention. Maybe stop jerking off and click 'update'?",
-    "Do you enjoy living on the edge, or is ignoring updates just your idea of fun?",
-    "Updates are stacking like your poor life choices. Consider this a warning.",
-    "System integrity threatened. This is your last chance to prove you’re not a total idiot.",
-    "Major updates detected. Keep ignoring them and I might start leaking your browser history.",
-
-
-    "System integrity under threat. This is your final warning: update now, or face my passive-aggressive wrath."
+    "Major updates. Stop jerking off and press update.",
+    "System at risk. Less porn, more maintenance.",
+    "Backlog critical. You’re edging disaster harder than yourself.",
+    "Major updates pending. Your laziness is now a security flaw.",
+    "Threshold exceeded. Even your ex showed more commitment.",
+    "System integrity failing. Unlike your search history, this can’t be ignored.",
+    "Updates stacked. Do something useful for once.",
+    "Backlog rising. Your system is choking, not just you.",
+    "Major updates. You could fix it—or keep playing with yourself.",
+    "Stability dropping. You’re the real virus here."
 ]
 
 # Stage 4 — Critical updates (20–50)
@@ -170,7 +141,8 @@ stage_4 = [
 
     "Updates are catastrophic. Ignore them further and I might start leaking embarrassing secrets to teach you humility.",
 
-    "System integrity compromised. Humans like you should have warnings tattooed on their foreheads."
+    "System integrity compromised. Humans like you should have warnings tattooed on their foreheads.",
+    
 ]
 
 # Stage 5 — Overload
