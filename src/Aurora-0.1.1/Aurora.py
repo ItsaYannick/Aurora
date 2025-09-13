@@ -26,13 +26,27 @@ from rich import print
 import os
 import datetime
 import time
-import config
+
+# ---------------- CONFIG ----------------
+auto_update = True
+# Thresholds for update stages
+stage0_threshold = 0
+normal_threshold = 20
+moderate_threshold = 60
+high_threshold = 120
+critical_threshold = 200
+atomic_threshold = 500
+nuclear_threshold = 1000
 
 # ---------------- FILE & STATE ----------------
 script_dir = os.getenv("HOME")+"/.config"
 flag_file = os.path.join(script_dir, ".aurora_update_flag")
 time_flag_file = os.path.join(script_dir, ".aurora_time_flag")
 result_storage_file = os.path.join(script_dir, ".aurora_result_storage_file")
+should_ask_today = False
+
+# ---------------- GET UPDATABLE PACKAGES ----------------
+
 
 # ---------------- FUNCTIONS ----------------
 
@@ -51,18 +65,19 @@ def should_sync():
 
 def should_ask_today_function():
     """Check if we have already asked the user today."""
+    global should_ask_today
     today = datetime.date.today().isoformat()
 
     if os.path.exists(flag_file):
         with open(flag_file, "r") as f:
             last_date = f.read().strip()
         if last_date == today:
-            config.should_ask_today = False
+            should_ask_today = False
             return
 
     with open(flag_file, "w") as f:
         f.write(today)
-    config.should_ask_today = True
+    should_ask_today = True
 
 
 def update():
@@ -72,11 +87,11 @@ def update():
 
 def package_count():
     """Print package count with color according to severity."""
-    if updateable_packages < config.normal_threshold:
+    if updateable_packages < normal_threshold:
         color = "green"
-    elif updateable_packages < config.moderate_threshold:
+    elif updateable_packages < moderate_threshold:
         color = "yellow"
-    elif updateable_packages < config.high_threshold:
+    elif updateable_packages < high_threshold:
         color = "red"
     else:
         color = "dark_red"
@@ -86,16 +101,16 @@ def package_count():
 
 def sas_response():
     """Print sassy response according to update stage and whether we ask today."""
-    if config.should_ask_today:
+    if should_ask_today:
         if updateable_packages == 0:
             print("Aurora:", random.choice(responses.stage_0))
-        elif updateable_packages < config.normal_threshold:
+        elif updateable_packages < normal_threshold:
             print("Aurora:", random.choice(responses.stage_1))
-        elif updateable_packages < config.moderate_threshold:
+        elif updateable_packages < moderate_threshold:
             print("Aurora:", random.choice(responses.stage_2_update))
-        elif updateable_packages < config.high_threshold:
+        elif updateable_packages < high_threshold:
             print("Aurora:", random.choice(responses.stage_3_update))
-        elif updateable_packages < config.critical_threshold:
+        elif updateable_packages < critical_threshold:
             print("Aurora:", random.choice(responses.stage_4_update))
         else:
             print("Aurora:", random.choice(responses.stage_5))
@@ -103,17 +118,17 @@ def sas_response():
         # Regular sassy responses when not prompting
         if updateable_packages == 0:
             print("Aurora:", random.choice(responses.stage_0))
-        elif updateable_packages < config.normal_threshold:
+        elif updateable_packages < normal_threshold:
             print("Aurora:", random.choice(responses.stage_1))
-        elif updateable_packages < config.moderate_threshold:
+        elif updateable_packages < moderate_threshold:
             print("Aurora:", random.choice(responses.stage_2))
-        elif updateable_packages < config.high_threshold:
+        elif updateable_packages < high_threshold:
             print("Aurora:", random.choice(responses.stage_3))
-        elif updateable_packages < config.critical_threshold:
+        elif updateable_packages < critical_threshold:
             print("Aurora:", random.choice(responses.stage_4))
-        elif updateable_packages < config.atomic_threshold:
+        elif updateable_packages < atomic_threshold:
             print("Aurora:", random.choice(responses.stage_5))
-        elif updateable_packages < config.nuclear_threshold:
+        elif updateable_packages < nuclear_threshold:
             print("Aurora:", random.choice(responses.stage_6))
         else:
             print("Aurora:", random.choice(responses.stage_7))
@@ -122,11 +137,12 @@ def sas_response():
 def update_handler():
     """Handle user prompts or forced updates based on load and stage."""
     sas_response()
-    if updateable_packages < config.moderate_threshold:
+
+    if updateable_packages < moderate_threshold:
         # Minimal load, no update required
         return
 
-    elif updateable_packages < config.high_threshold and config.should_ask_today:
+    elif updateable_packages < high_threshold and should_ask_today:
         # Moderate to high load, ask user
         valid_responses = ["y", "n"]
         while True:
@@ -141,7 +157,7 @@ def update_handler():
             else:
                 print("Aurora:", random.choice(responses.invalid_input_responses))
 
-    elif updateable_packages >= config.high_threshold and config.auto_update:
+    elif updateable_packages >= high_threshold and auto_update:
         # Forced auto-update
         print("Aurora:", random.choice(responses.aurora_auto_update_responses))
         update()
