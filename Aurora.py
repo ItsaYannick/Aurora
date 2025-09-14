@@ -37,15 +37,19 @@ result_storage_file = os.path.join(script_dir, ".aurora_result_storage_file")
 # ---------------- FUNCTIONS ----------------
 
 def should_sync():
-    """Check if we have synced in the last hour"""
-    current_time = str(time.localtime().tm_hour)
+    """Check if we have synced in given sync time"""
+    current_time = datetime.datetime.now()
+
+    update_hour = None
     if os.path.exists(time_flag_file):
         with open(time_flag_file, "r") as f:
-            last_hour = f.read().strip()
-        if last_hour == current_time:
+            content = f.read().strip()
+            update_hour = int(content)
+        if current_time.hour < update_hour:
             return False
     with open(time_flag_file, "w") as f:
-        f.write(current_time)
+        next_update_hour = (current_time + datetime.timedelta(hours=config.sync_time)).hour
+        f.write(str(next_update_hour))
     return True
 
 
@@ -153,7 +157,6 @@ def update_handler():
 #Check if pacman-contrib is installed
 check = subprocess.run(["pacman", "-Q", "pacman-contrib"], capture_output=True, text=True)
 
-
 if check.returncode != 0:
     print("Aurora:", random.choice(responses.missing_contrib))
 else:
@@ -170,4 +173,6 @@ else:
     should_ask_today_function()
     package_count()
     update_handler()
+
+
 
