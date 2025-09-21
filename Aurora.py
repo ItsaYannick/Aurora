@@ -40,16 +40,18 @@ def should_sync():
     """Check if we have synced in given sync time"""
     current_time = datetime.datetime.now()
 
-    update_hour = None
     if os.path.exists(time_flag_file):
         with open(time_flag_file, "r") as f:
-            content = f.read().strip()
-            update_hour = int(content)
-        if current_time.hour < update_hour:
-            return False
+            next_sync_str = f.read().strip()
+        if next_sync_str:
+           next_sync = datetime.datetime.fromisoformat(next_sync_str)
+
+           if current_time < next_sync:
+                return False
+
+    next_sync = current_time + datetime.timedelta(hours=config.sync_time)
     with open(time_flag_file, "w") as f:
-        next_update_hour = (current_time + datetime.timedelta(hours=config.sync_time)).hour
-        f.write(str(next_update_hour))
+        f.write(next_sync.isoformat())
     return True
 
 
